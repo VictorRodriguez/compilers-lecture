@@ -1,12 +1,25 @@
 # compilers-lecture
 
-This GIT repository contains a list of workshops and labs for compilers' design lecture. The level of complexitiy is for undergraduate students of computer science careers at ITESM university  
+This GIT repository contains a list of workshops and labs for compilers' design lecture. The level of complexity is for undergraduate students of computer science careers at ITESM university  
 
 This is plan to be deliverable in a period of time of 4 to 6 months. It is adjustable in time and order; however the expectations and basic topics should keep the essence of the plan.
 
 Agenda: 
 
-Oftopic Trainings ( in case you need them ) 
+* [Introduction to compilers] (https://drive.google.com/open?id=18-tj7JEHmfY9QH7tDWEB0FHgfZslgUd3FQmgZh4uMCQ)
+  * Language Processors
+  * The Structure of a Compiler
+    * Lexical Analysis
+    * Syntax Analysis
+    * Semantic Analysis
+    * Intermediate Code Generation
+    * Code Optimization
+    * Code Generation
+    * Symbol-Table Management
+    * The Grouping of Phases into Passes
+    * Compiler-Construction Tools
+
+Extra topic Trainings ( in case you need them ) 
   * Git training
     * https://drive.google.com/file/d/0B7iKrGdVkDhINERiQnppOU5IVVk/view?usp=sharing
   * Bash Trainings: 
@@ -17,7 +30,7 @@ Oftopic Trainings ( in case you need them )
   * GCC for performance Trainings:
     * https://drive.google.com/open?id=0B7iKrGdVkDhIUzZTVTduczJrQTg
 
-Pondaration: 
+Ponderation: 
 
  * 35% First Term
    * 15% Weekly Quizzes
