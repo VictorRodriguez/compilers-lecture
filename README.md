@@ -1,9 +1,8 @@
 # compilers-lecture
 
-Workshops and labs for ITESM compilers' design lecture. The intention is to increase the level of knowledge on the undergraduate students of computer science careers. 
+This GIT repository contains a list of workshops and labs for compilers' design lecture. The level of complexitiy is for undergraduate students of computer science careers at ITESM university  
 
-This is plan to be deliverable in a period of time of 4 to 6 months. 
-It is adjustable in time and order; however the expectations and basic topics should keep the essence of the plan.
+This is plan to be deliverable in a period of time of 4 to 6 months. It is adjustable in time and order; however the expectations and basic topics should keep the essence of the plan.
 
 Agenda: 
 
