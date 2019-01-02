@@ -6,7 +6,7 @@ This is plan to be deliverable in a period of time of 4 to 6 months. It is adjus
 
 Agenda: 
 
-* [Introduction to compilers] (https://drive.google.com/open?id=18-tj7JEHmfY9QH7tDWEB0FHgfZslgUd3FQmgZh4uMCQ)
+* [Introduction to compilers](https://drive.google.com/open?id=18-tj7JEHmfY9QH7tDWEB0FHgfZslgUd3FQmgZh4uMCQ)
   * Language Processors
   * The Structure of a Compiler
     * Lexical Analysis
