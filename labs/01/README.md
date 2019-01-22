@@ -9,6 +9,14 @@ developers such as:
 * How to read the object file in the command line
 * How to automate the analysis of ASM code
 
+# Requirements
+
+* Linux machine, either a VM or a baremetal host
+* GCC compiler (at least version 4.8)
+* Autotools
+* shell scripting
+* git send mail server installed and configured on your Linux machine
+
 ## Instructions
 
 * Inside this directory read carefully and understand what's inside the Makefile
