@@ -1,12 +1,15 @@
 #include <stdio.h>
 
-void foo(){
-    float a,b,c = 1;
+float foo(){
+    float a,c = 1;
+    float b = 1;
     a = b + c * 60;
+    return a;
 }
 
 int main(void) {
     printf("Hello World\n");
-    foo();
-    return 0; 
+    float result = foo();
+    printf("%f",result);
+    return 0;
 }
