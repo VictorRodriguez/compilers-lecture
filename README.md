@@ -2,13 +2,13 @@
 
 This GIT repository contains a list of workshops and labs for compilers' design
 lecture. The level of complexity is for undergraduate students of computer
-science careers at ITESM university  
+science careers at ITESM university
 
 This is plan to be deliverable in a period of time of 4 to 6 months. It is
 adjustable in time and order; however the expectations and basic topics should
 keep the essence of the plan.
 
-Agenda: 
+Agenda:
 
 * [Introduction to compilers](https://drive.google.com/open?id=18-tj7JEHmfY9QH7tDWEB0FHgfZslgUd3FQmgZh4uMCQ)
   * Language Processors
@@ -27,15 +27,15 @@ Agenda:
   * Architecture specific optimizations
   * Programming Language Basics
 * [Syntax directed Translation](https://docs.google.com/presentation/d/1KE89YKtU4IDtK5locxnlciRHkWltg9VG_C42ORVR7WI/edit?usp=sharing)
-  * Syntax definition 
+  * Syntax definition
   * Definition of gramars
   * Parse Trees
   * Ambiguity
 
-Extra topic Trainings ( in case you need them ) 
+Extra topic Trainings ( in case you need them )
   * Git training
     * https://drive.google.com/file/d/0B7iKrGdVkDhINERiQnppOU5IVVk/view?usp=sharing
-  * Bash Trainings: 
+  * Bash Trainings:
     * https://drive.google.com/file/d/0B7iKrGdVkDhILU9QRWllWmNKM2M/view?usp=sharing
     * https://drive.google.com/file/d/0B7iKrGdVkDhIWGVhVzhtTlZjWGc/view?usp=sharing
     * https://drive.google.com/file/d/0B7iKrGdVkDhIRkVPSlNPdkdSS2c/view?usp=sharing
@@ -43,7 +43,7 @@ Extra topic Trainings ( in case you need them )
   * GCC for performance Trainings:
     * https://drive.google.com/open?id=0B7iKrGdVkDhIUzZTVTduczJrQTg
 
-Ponderation: 
+Ponderation:
 
  * 35% First Term
    * 15% Weekly Quizzes
@@ -56,11 +56,11 @@ Ponderation:
    * 15% Labs
 
 * 30% Final Exam ( if student decides to do final project it is = 10% and final
-  exam 20 % ) 
+  exam 20 % )
 
-Bibliography: 
-Mian Book : Compilers: Principles, Techniques, and Tools 
+Bibliography:
+Mian Book : Compilers: Principles, Techniques, and Tools
 Textbook by Alfred Aho, Jeffrey Ullman, Monica S. Lam, and Ravi Sethi
 
-Other good books : 
+Other good books :
 Principles of Compiler Design Textbook by Alfred Aho and Jeffrey Ullman
