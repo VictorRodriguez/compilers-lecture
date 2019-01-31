@@ -1,4 +1,4 @@
-# Lab 01 instructions
+# Lab 02 instructions
 
 ## Objective
 
@@ -19,7 +19,7 @@ is hard if you do it in full generality.)
 ## Instructions
 
 * Create a file named:
-    ```my_compiler.c```
+```my_compiler.c```
 
 * Make a code in C that given a C code coudl detect these errors:
     * unbalanced parentheses
@@ -33,49 +33,52 @@ is hard if you do it in full generality.)
 
 ## Expected result:
 
-    Giving a sample C code as hello.c:
+Giving a sample C code as hello.c:
 
-    ```
-	#include <stdio.h>
+```
+    #include <stdio.h>
 
-	int main(){
-		for (int x = 0; x < 10;x++){
-			printf("hi\n");
-		}
-		return 0;
-	}
+    int main(){
+        for (int x = 0; x < 10;x++){
+            printf("hi\n");
+        }
+        return 0;
+    }
 
-	```
-	Then you can build as:
-	```
+```
+Then you can build as:
+
+```
     make
-	```
+```
 
-	Run as:
-	```
-    ./my_compiler hello.c
-	There is no errors
-    ```
+Run as:
 
-	Or modify to insert some errors:
-	```
+```
     ./my_compiler hello.c
-	There is a missing (  error in this line: (print line)
-	There is a missing {  error in this line: (print line)
-	There is a missing "  error in this line: (print line)
-    ```
+    There is no errors
+```
+
+Or modify to insert some errors:
+
+```
+    ./my_compiler hello.c
+    There is a missing (  error in this line: (print line)
+    There is a missing {  error in this line: (print line)
+    There is a missing "  error in this line: (print line)
+```
 
 ## Please send the mail as git send mail:
 
-    ```
-        $ git add ./my_compiler.c Makefile
-        $ git commit -s -m <STUDENT-ID>-homework-02
-        $ git send-email -1
-    ```
+```
+    $ git add ./my_compiler.c Makefile
+    $ git commit -s -m <STUDENT-ID>-homework-02
+    $ git send-email -1
+```
 Do some tests sending the mail to your personal account , if you get the mail ,
 then you can be sure I will get the mail
 
 # Time to do the homework:
 
-    1 week from the moment the mail is sent to students
+1 week from the moment the mail is sent to students
 
