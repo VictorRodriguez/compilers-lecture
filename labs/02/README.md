@@ -30,7 +30,6 @@ is hard if you do it in full generality.)
 * Make a Makefileto build and clean (take as example the one from lab 01):
 
 
-
 ## Expected result:
 
 Giving a sample C code as hello.c:
@@ -46,11 +45,6 @@ Giving a sample C code as hello.c:
     }
 
 ```
-Then you can build as:
-
-```
-    make
-```
 
 Run as:
 
@@ -59,14 +53,28 @@ Run as:
     There is no errors
 ```
 
-Or modify to insert some errors:
+Or modify to insert some errors  and comments like hello-errors.c:
+
+```
+    #include <stdio.h>
+    // coment (this should not be detected
+    int main(){
+        for (int x = 0; x < 10;x++)
+            printf("hi\n);
+        }
+        return 0;
+    }
+
+```
 
 ```
     ./my_compiler hello.c
-    There is a missing (  error in this line: (print line)
     There is a missing {  error in this line: (print line)
     There is a missing "  error in this line: (print line)
 ```
+
+If yoru code can detect that you are more than fine
+
 
 ## Please send the mail as git send mail:
 
@@ -81,4 +89,22 @@ then you can be sure I will get the mail
 # Time to do the homework:
 
 1 week from the moment the mail is sent to students
+
+# How the teach is going to test yoru homework
+
+* Copy your patch form the mail to test.patch
+* patch -p1 < test.patch
+* make
+* ./my_compiler hello.c ( should print no errors )
+* ./my_compiler hello-errors.c ( should print the errors )
+
+Test by yourself this flow , you can generate yoru patch with: 
+
+```
+git format-patch -1
+```
+The generated file shoudl be like:
+```
+0001-<studentid>-homework-02.patch
+```
 
