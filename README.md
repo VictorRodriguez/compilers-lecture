@@ -59,8 +59,13 @@ Ponderation:
   exam 20 % )
 
 Bibliography:
-Mian Book : Compilers: Principles, Techniques, and Tools
-Textbook by Alfred Aho, Jeffrey Ullman, Monica S. Lam, and Ravi Sethi
+
+Mian Book : 
+* Crafting a Compiler with C, by Charles N. Fischer 
 
 Other good books :
-Principles of Compiler Design Textbook by Alfred Aho and Jeffrey Ullman
+
+* Introduction to computer theory Book by Daniel I. A. Cohen
+* Principles of Compiler Design Textbook by Alfred Aho and Jeffrey Ullman
+* Compilers: Principles, Techniques, and Tools; Alfred Aho, Jeffrey Ullman, Monica S. Lam, and Ravi Sethi
+* Languages and Machines: An Introduction to the Theory of Computer Science [3rd Edition](https://www.amazon.com/Languages-Machines-Introduction-Computer-Science/dp/0321322215)
