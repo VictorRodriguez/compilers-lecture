@@ -86,6 +86,32 @@ print id
 
 ## Expected result:
 
+* Code a lex.c that fullfill the requirements
+* Code a Makefile for this code
+* Generate a random AC code with:
+
+```
+python3 code_generator.py > example.ac
+
+```
+
+* Compile your code with the makefile and execute as follows:
+
+```
+make
+lex example.ac
+```
+
+This should generate kind of the following file: lex.out
+
+```
+floatdcl id intdcl id
+id assign inum
+id assign id plus fnum
+print id
+```
+
+
 ## Please send the mail as git send mail:
 
 ```
@@ -97,7 +123,23 @@ print id
 Do some tests sending the mail to your personal account, if you get the mail,
 then you can be sure I will get the mail
 
-# Time to do the homework:
+## Performance test
+
+The code generation has an option to generate stress examples:
+
+```
+python3 code_generator.py --stress
+```
+
+This will generate a huge AC random code
+
+Try your solution with this option and check how much time to your solution to
+do the lex part of the compiler. Consider that this is just the first part of
+the compiler work, other parts are necesary in the future
+
+Do you think that we could make it faster?
+
+## Time to do the homework:
 
 One week from the moment the mail is sent to students
 
