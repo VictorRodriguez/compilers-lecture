@@ -139,6 +139,21 @@ the compiler work, other parts are necesary in the future
 
 Do you think that we could make it faster?
 
+Why performance is important?
+
+Suppose we want to implement a very fast compiler that can compile a program in
+a few seconds. We will use 30,000 lines per minute (500 lines per second) as
+our goal. (Compilers such as Turbo C++ achieve such speeds.) If an average line
+contains 20 characters, the compiler must scan 10,000 characters per second. On
+a processor that executes 10,000,000 instructions per second, even if we did
+nothing but scanning, we would have only 1,000 instructions per input character
+to spend. But because scanning is not the only thing a compiler does, 250
+instructions per character is more realistic. This is a rather tight budget,
+considering that even a simple assignment takes several instructions on a
+typical processor. Although faster processors are common these days and 30,000
+lines per minute is an ambitious speed, clearly a poorly coded scanner can
+dramatically impact a compiler’s performance.
+
 ## Time to do the homework:
 
 One week from the moment the mail is sent to students
