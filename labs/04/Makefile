@@ -1,4 +1,6 @@
 all:
+	lex example0.l
+	gcc lex.yy.c -o example0 -ll
 	lex example1.l
 	gcc lex.yy.c -o example1 -ll
 	lex example2.l
