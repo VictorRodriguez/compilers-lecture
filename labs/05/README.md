@@ -34,6 +34,13 @@ Referring to Section 4.2.1 of the book: Crafting a Compiler 2nd edition
 	* Devise an algorithm to detect nonterminals that cannot be reached from a CFG’s goal symbol.
 	* Devise an algorithm to detect nonterminals that cannot derive any terminal string in a CFG.
 
+The code could be in any of the following lenguages:
+
+* C ( recomended )
+* C++
+* python
+* Java
+
 ```
 make
 ./gramar_analyser <FILE>
