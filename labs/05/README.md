@@ -1,8 +1,8 @@
-# Lab 04 instructions
+# Lab 05 instructions
 
 ## Objective
 
-Make the student understand how to analize a valid CFG
+Make the student understand how to analyze a valid CFG
 
 # Requirements
 
@@ -16,6 +16,14 @@ A grammar is reduced if each of its nonterminals and productions participates
 in the derivation of some string in the grammar’s language. Nonterminals that
 can be safely removed are called useless.
 
+```
+S → A | B 
+A → a 
+B → B b
+C → c
+
+```
+	  
 The above grammar contains two kinds of nonterminals that cannot participate in any derived string:
 
 • With S as the start symbol, the nonterminal C cannot appear in any phrase.
