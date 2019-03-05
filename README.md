@@ -36,6 +36,14 @@ Agenda:
   * DFA
   * LEX
   * YACC
+* [Grammars and Parsing](https://drive.google.com/open?id=1pUU1y9kDVrs9kkP_Zh1oC59G94Hi3FzSqehC9nmve0g)
+  * Grammars in our lifes
+  * Parse trees
+  * Properties of CFGs
+  * Reduced Gramars
+  * Backus-Naur Form (BNF) notation
+  * Parsers and Recognizers
+
 
 Extra topic Trainings ( in case you need them )
   * Git training
