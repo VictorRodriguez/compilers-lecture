@@ -1,4 +1,4 @@
-# Lab 05 instructions
+# Lab 06 instructions
 
 ## Objective
 
