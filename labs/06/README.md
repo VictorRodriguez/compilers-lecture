@@ -81,7 +81,7 @@ This will generate the tokens.out
 True/False and print the clean gramar
 
 ./syntax-calc tokens.out my_gramar.txt
-
+```
 And generate a CFG derivation tree in this format:
 
 ```
