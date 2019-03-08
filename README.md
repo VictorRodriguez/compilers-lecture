@@ -43,6 +43,11 @@ Agenda:
   * Reduced Gramars
   * Backus-Naur Form (BNF) notation
   * Parsers and Recognizers
+* [Top-Down Parsing] (https://docs.google.com/presentation/d/1b9ecDphpIwD-gSvFawZQzXSg1U_HAel7CmucwWCAtI4/edit?usp=sharing)
+  * LL(k)
+  * Recursive-descent parsers
+  * Eliminating Ambiguity
+  * Elimination of left recursion
 
 
 Extra topic Trainings ( in case you need them )
