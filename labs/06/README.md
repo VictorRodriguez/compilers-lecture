@@ -55,17 +55,9 @@ Reuse your code from lab 05 to:
 (reuse the same code , no need to re write in C, just call as a process)
 
 Once we know that the Grammer propoused for the calculator has none of these
-errors, please create a code in C that will take as input the gramar specified
-in a FILE in Backus-Naur Form (BNF) notation to create a perser and a
-recognizer for the calculator: i.e:
+errors, please create a code in C for the  Recursive Decent Parsing algorithm, follow example from:
 
-
-```
-cat my_gramar.txt
-
-<name-part> ::= <personal-part> <last-name> <opt-suffix-part> <EOL>
-			| <personal-part> <name-part>
-```
+[ Recursive Decent Parsing](https://www.youtube.com/watch?v=nv9J5Jb7IxM)
 
 
 ## How could it be tested:
@@ -75,12 +67,13 @@ make ( compile everything )
 
 ./lexic_analyzer <CODEFILE>
 
+```
 This will generate the tokens.out
 
-./gramar_analyser my_gramar.txt
-True/False and print the clean gramar
+Use then for generate the parse tree:
 
-./syntax-calc tokens.out my_gramar.txt
+```
+./syntax-calc tokens.out 
 ```
 And generate a CFG derivation tree in this format:
 
