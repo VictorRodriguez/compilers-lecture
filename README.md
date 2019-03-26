@@ -48,6 +48,10 @@ Agenda:
   * Recursive-descent parsers
   * Eliminating Ambiguity
   * Elimination of left recursion
+* [Bottom-Up Parsing](https://drive.google.com/open?id=1WCBfCFD-7AuhNQYGEi1ZxJKsevSjsKCmL6kM0Uss5Mw)
+  * LR(k)
+  * Shift-reduce
+  * Simple LR Parser algorithm
 
 
 Extra topic Trainings ( in case you need them )
