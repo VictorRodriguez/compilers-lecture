@@ -100,7 +100,7 @@ https://renenyffenegger.ch/notes/tools/Graphviz/examples/index
 
 ```
     $ git add syntax-calc.c Makefile
-    $ git commit -s -m <STUDENT-ID>-homework-06
+    $ git commit -s -m <STUDENT-ID>-homework-07
     $ git send-email -1
 
 ```
