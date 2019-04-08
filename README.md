@@ -57,7 +57,10 @@ Agenda:
   * Statement mode
   * Error productions
   * Global correction
-
+* [Abstract Syntax Trees](https://docs.google.com/presentation/d/1NeO-SkZLcOQAyYevel_xV5zBk-CL5Pw7c7fvEz7XKmY/edit?usp=sharing)
+  * Example of Abstract Syntax Tree
+  * Semantic Actions
+  * Semantic Actions dependencies
 
 Extra topic Trainings ( in case you need them )
   * Git training
