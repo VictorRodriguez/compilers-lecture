@@ -72,6 +72,8 @@ Extra topic Trainings ( in case you need them )
     * https://drive.google.com/file/d/0B7iKrGdVkDhIbkdKYWI1R19oMzQ/view?usp=sharing
   * GCC for performance Trainings:
     * https://drive.google.com/open?id=0B7iKrGdVkDhIUzZTVTduczJrQTg
+  * GCC ROP attacks workshop:
+    * https://github.com/VictorRodriguez/operating-systems-lecture/tree/master/labs/gcc/security
 
 Ponderation:
 
