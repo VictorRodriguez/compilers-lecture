@@ -61,6 +61,13 @@ Agenda:
   * Example of Abstract Syntax Tree
   * Semantic Actions
   * Semantic Actions dependencies
+* [Semantic Analysis](https://drive.google.com/open?id=1Tt-VbEa4nQLzoVRJnJ_sIgf4K-BWtsv74ygew1z13T8)
+  * Scope resolution
+  * Type checking
+  * Array-bound checking
+  * Semantic Errors
+  * Attribute Grammar
+  * Inherited attributes
 
 Extra topic Trainings ( in case you need them )
   * Git training
