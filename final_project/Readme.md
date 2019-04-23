@@ -15,6 +15,8 @@ based on validated inputs.
 
 This is the design of a regular compiler:
 
+```
+
                                                                   source
                                                                      +
               +-----------+                                          |
@@ -31,7 +33,9 @@ bas.l +-----> |           | +----> lex.yy.c+                         v
               |           |                                        output
               +-----------+
 
+```
 The change we are going to do is:
+```
 
                                                   examples of
                                                   valid/invalid
@@ -51,6 +55,7 @@ The change we are going to do is:
    |                                       |     intelligence   |
    +---------------------------------------+     system         |
                                            +--------------------+
+```
 
 ## Report and presentation
 
