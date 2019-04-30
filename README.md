@@ -68,8 +68,7 @@ Agenda:
   * Semantic Errors
   * Attribute Grammar
   * Inherited attributes
-  
-  * [Symbol Table & Intermediate Code Generation](https://docs.google.com/presentation/d/1-EP0_CbRf-g9clIx7GcAgLCe-UEFv_WRpCmrfRoJXxY/edit?usp=sharing)
+* [Symbol Table & Intermediate Code Generation](https://docs.google.com/presentation/d/1-EP0_CbRf-g9clIx7GcAgLCe-UEFv_WRpCmrfRoJXxY/edit?usp=sharing)
   
 
 Extra topic Trainings ( in case you need them )
