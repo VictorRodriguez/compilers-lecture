@@ -69,7 +69,8 @@ Agenda:
   * Attribute Grammar
   * Inherited attributes
 * [Symbol Table & Intermediate Code Generation](https://docs.google.com/presentation/d/1-EP0_CbRf-g9clIx7GcAgLCe-UEFv_WRpCmrfRoJXxY/edit?usp=sharing)
-  
+* [Code optimization](https://drive.google.com/open?id=1sEwM70e70PzgdeEZ3g348ai_0xCntddm5W0nrFdxbrc)
+
 
 Extra topic Trainings ( in case you need them )
   * Git training
