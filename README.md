@@ -22,10 +22,6 @@ Agenda:
     * Symbol-Table Management
     * The Grouping of Phases into Passes
     * Compiler-Construction Tools
-* [Compilers- Evolution, Basics and Optimizations](https://drive.google.com/openid=1eyi0sNu1XZ498knSle2CwgrozegSqYfVOvCGOxuL5rc)
-  * Evolution of Compilers
-  * Architecture specific optimizations
-  * Programming Language Basics
 * [Simple Syntax directed Translation](https://docs.google.com/presentation/d/1KE89YKtU4IDtK5locxnlciRHkWltg9VG_C42ORVR7WI/edit?usp=sharing)
   * Syntax definition
   * Definition of gramars
