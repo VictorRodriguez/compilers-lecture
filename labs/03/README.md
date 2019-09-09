@@ -53,7 +53,7 @@ represent the operations specified in an ac program.
 
 The objective of this lab is the creation of lexical analyzer of ac.
 
-A valid line of code in ac coudl be:
+A valid line of code in ac could be:
 
 ```
 // basic code
@@ -95,11 +95,12 @@ python3 code_generator.py > example.ac
 
 ```
 
-* Compile your code with the makefile and execute as follows:
+* Compile and execute as follows:
 
 ```
-make
 lex example.ac
+gcc lex.yy.c -o parser
+./parser <source code for ac language>
 ```
 
 This should generate kind of the following file: lex.out
@@ -147,10 +148,14 @@ our goal. (Compilers such as Turbo C++ achieve such speeds.) If an average line
 contains 20 characters, the compiler must scan 10,000 characters per second. On
 a processor that executes 10,000,000 instructions per second, even if we did
 nothing but scanning, we would have only 1,000 instructions per input character
-to spend. But because scanning is not the only thing a compiler does, 250
+to spend. 
+
+However, because scanning is not the only thing a compiler does, 250
 instructions per character is more realistic. This is a rather tight budget,
 considering that even a simple assignment takes several instructions on a
-typical processor. Although faster processors are common these days and 30,000
+typical processor. 
+
+Although faster processors are common these days and 30,000
 lines per minute is an ambitious speed, clearly a poorly coded scanner can
 dramatically impact a compiler’s performance.
 
