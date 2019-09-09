@@ -98,9 +98,9 @@ python3 code_generator.py > example.ac
 * Compile and execute as follows:
 
 ```
-lex my_homework.ac
-gcc lex.yy.c -o parser
-./parser <source code for ac language>
+lex my_homework.l (the lex code you generate in your homework)
+gcc lex.yy.c -o lexical_scan -lfl
+./lexical_scan <source code for ac language like example.ac>
 ```
 
 This should generate kind of the following file: lex.out
