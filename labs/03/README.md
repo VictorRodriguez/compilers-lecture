@@ -98,7 +98,7 @@ python3 code_generator.py > example.ac
 * Compile and execute as follows:
 
 ```
-lex example.ac
+lex my_homework.ac
 gcc lex.yy.c -o parser
 ./parser <source code for ac language>
 ```
