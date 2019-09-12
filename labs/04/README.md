@@ -2,7 +2,8 @@
 
 ## Objective
 
-Make the student understand the power of lex language
+Make the student understand the power of lex language making a C code that
+performs the lexical analysis of the ac src program
 
 # Requirements
 
@@ -14,11 +15,7 @@ Make the student understand the power of lex language
 
 ## Instructions
 
-Lex is a computer program that generates lexical analyzers ("scanners" or
-"lexers").Lex reads an input stream specifying the lexical analyzer and outputs
-source code implementing the lexer in the C programming language.
-
-Please generate a lex code to parse the previous example of lab 03.
+Please generate a C code to parse the previous example of lab 03.
 
 A valid line of code in ac could be:
 
@@ -59,7 +56,7 @@ print id
 
 ## Expected result:
 
-* Code a compiler.l that fulfill the requirements
+* Code a lex_analaizer.c that fulfill the requirements
 * Code a Makefile for this code
 * Generate a random AC code with:
 
@@ -71,16 +68,15 @@ python3 code_generator.py > example.ac
 * Compile your code with the makefile and execute as follows:
 
 ```
-make
-lex compiler.l
-gcc lex.yy.c -o compiler -ll
+gcc lex_analaizer.c -o lex_analaizer
+./lex_analaizer example.ac
 ```
 
 
 ## Please send the mail as git send mail:
 
 ```
-    $ git add  compiler.l Makefile
+    $ git add lex_analaizer.c
     $ git commit -s -m <STUDENT-ID>-homework-04
     $ git send-email -1
 
@@ -123,8 +119,6 @@ Edition](https://www.amazon.com/lex-yacc-Doug-Brown/dp/1565920007)
 At the end of chapter 1 there is a very similar code as the one requested in
 this homework, you just need to read chapter 1 of this book :)
 * [useoflexinc](https://www.quora.com/What-is-the-function-of-yylex-yyin-yyout-and-fclose-yyout-in-LEX)
-
-
 
 ## Time to do the homework:
 
