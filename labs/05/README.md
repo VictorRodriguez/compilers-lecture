@@ -17,13 +17,15 @@ in the derivation of some string in the grammar’s language. Nonterminals that
 can be safely removed are called useless.
 
 ```
-S → A | B 
-A → a 
-B → B b
-C → c
+ <expr> ::= <a> | <b>
 
+ <a> ::= a
+
+ <b> ::= <B>b
+
+ <c> ::= c
 ```
-	  
+
 The above grammar contains two kinds of nonterminals that cannot participate in any derived string:
 
 • With S as the start symbol, the nonterminal C cannot appear in any phrase.
