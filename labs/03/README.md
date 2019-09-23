@@ -86,7 +86,7 @@ print id
 
 ## Expected result:
 
-* Code a lex.c that fullfill the requirements
+* Code a lex file that fullfill the requirements
 * Code a Makefile for this code
 * Generate a random AC code with:
 
