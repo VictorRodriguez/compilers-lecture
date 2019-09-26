@@ -35,7 +35,7 @@ Your output should be
 
 Your calculator should accept:
 
-* + - / and * 
+* ```+ - / and * ```
 * Catch divition by zero as an error before executing
 * Only accept integers
 * Only print valid variables
