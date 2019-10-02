@@ -5,7 +5,7 @@
 %}
 
 %%
-[\t ]+
+[\t ]+ 
 [/]{2}[[a-zA-Z0-9]*[\t ]*]*\n { return COMMENT; }
 i  	{ return INTDCL; }
 p  {  return PRINT; }

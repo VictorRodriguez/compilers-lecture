@@ -67,8 +67,12 @@
 	#include <stdio.h>
     #include <math.h> 
     double symtable[23];
+    extern int yylex();
+    extern FILE *yyin;
+    extern FILE *yyout;
 
-#line 72 "y.tab.c" /* yacc.c:339  */
+
+#line 76 "y.tab.c" /* yacc.c:339  */
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -132,12 +136,12 @@ extern int yydebug;
 
 union YYSTYPE
 {
-#line 7 "calc.y" /* yacc.c:355  */
+#line 11 "calc.y" /* yacc.c:355  */
 
     double dval;
     int vblno;
 
-#line 141 "y.tab.c" /* yacc.c:355  */
+#line 145 "y.tab.c" /* yacc.c:355  */
 };
 
 typedef union YYSTYPE YYSTYPE;
@@ -154,7 +158,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 158 "y.tab.c" /* yacc.c:358  */
+#line 162 "y.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -452,8 +456,8 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    19,    19,    20,    21,    23,    25,    26,    28,    29,
-      31,    32,    33,    34,    35,    37,    39,    40
+       0,    23,    23,    24,    25,    27,    29,    30,    32,    33,
+      35,    36,    37,    38,    39,    41,    43,    44
 };
 #endif
 
@@ -1231,73 +1235,73 @@ yyreduce:
   switch (yyn)
     {
         case 5:
-#line 23 "calc.y" /* yacc.c:1646  */
+#line 27 "calc.y" /* yacc.c:1646  */
     { symtable[(yyvsp[0].vblno)] = 0; }
-#line 1237 "y.tab.c" /* yacc.c:1646  */
+#line 1241 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
-#line 28 "calc.y" /* yacc.c:1646  */
+#line 32 "calc.y" /* yacc.c:1646  */
     { symtable[(yyvsp[-2].vblno)] = (yyvsp[0].dval); }
-#line 1243 "y.tab.c" /* yacc.c:1646  */
+#line 1247 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
-#line 29 "calc.y" /* yacc.c:1646  */
+#line 33 "calc.y" /* yacc.c:1646  */
     { printf("%g\n", symtable[(yyvsp[0].vblno)]); }
-#line 1249 "y.tab.c" /* yacc.c:1646  */
+#line 1253 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 10:
-#line 31 "calc.y" /* yacc.c:1646  */
+#line 35 "calc.y" /* yacc.c:1646  */
     { (yyval.dval)+=(yyvsp[0].dval); }
-#line 1255 "y.tab.c" /* yacc.c:1646  */
+#line 1259 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 11:
-#line 32 "calc.y" /* yacc.c:1646  */
+#line 36 "calc.y" /* yacc.c:1646  */
     { (yyval.dval)-=(yyvsp[0].dval); }
-#line 1261 "y.tab.c" /* yacc.c:1646  */
+#line 1265 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 12:
-#line 33 "calc.y" /* yacc.c:1646  */
+#line 37 "calc.y" /* yacc.c:1646  */
     { (yyval.dval)*=(yyvsp[0].dval); }
-#line 1267 "y.tab.c" /* yacc.c:1646  */
+#line 1271 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 13:
-#line 34 "calc.y" /* yacc.c:1646  */
+#line 38 "calc.y" /* yacc.c:1646  */
     { (yyval.dval) /=(yyvsp[0].dval); }
-#line 1273 "y.tab.c" /* yacc.c:1646  */
+#line 1277 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 14:
-#line 35 "calc.y" /* yacc.c:1646  */
+#line 39 "calc.y" /* yacc.c:1646  */
     { (yyval.dval)=(yyvsp[0].dval); }
-#line 1279 "y.tab.c" /* yacc.c:1646  */
+#line 1283 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 15:
-#line 37 "calc.y" /* yacc.c:1646  */
+#line 41 "calc.y" /* yacc.c:1646  */
     { if((yyvsp[0].dval) == 0.0) {yyerror("Math exception, divide by 0"); return;} else {(yyval.dval) = (yyvsp[0].dval);} }
-#line 1285 "y.tab.c" /* yacc.c:1646  */
+#line 1289 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 16:
-#line 39 "calc.y" /* yacc.c:1646  */
+#line 43 "calc.y" /* yacc.c:1646  */
     { (yyval.dval) = symtable[(yyvsp[0].vblno)]; }
-#line 1291 "y.tab.c" /* yacc.c:1646  */
+#line 1295 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 17:
-#line 40 "calc.y" /* yacc.c:1646  */
+#line 44 "calc.y" /* yacc.c:1646  */
     { (yyval.dval) = (yyvsp[0].dval); }
-#line 1297 "y.tab.c" /* yacc.c:1646  */
+#line 1301 "y.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1301 "y.tab.c" /* yacc.c:1646  */
+#line 1305 "y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1525,4 +1529,24 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 42 "calc.y" /* yacc.c:1906  */
+#line 46 "calc.y" /* yacc.c:1906  */
+
+
+
+main(argc,argv)
+int argc;
+char **argv;
+{
+	if(argc > 1){
+		FILE *file;
+		
+		file = fopen(argv[1], "r");
+		if(!file){
+			printf("Error opening file\n");
+			exit(1);
+			}
+			yyin = file;
+		}
+	yyparse();
+	return 0;
+}

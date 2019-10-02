@@ -2,6 +2,10 @@
 	#include <stdio.h>
     #include <math.h> 
     double symtable[23];
+    extern int yylex();
+    extern FILE *yyin;
+    extern FILE *yyout;
+
 %}
 
 %union {
@@ -40,3 +44,22 @@
         | INUM { $$ = $1; } 
         ;
 %%
+
+
+main(argc,argv)
+int argc;
+char **argv;
+{
+	if(argc > 1){
+		FILE *file;
+		
+		file = fopen(argv[1], "r");
+		if(!file){
+			printf("Error opening file\n");
+			exit(1);
+			}
+			yyin = file;
+		}
+	yyparse();
+	return 0;
+}
