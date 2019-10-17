@@ -44,6 +44,10 @@ Should be translated to:
 This is pretty cool! I can't wait to see what this thing can do!
 ```
 
+Take as help the page:
+
+https://emojitranslate.com/
+
 ## Report and presentation
 
 Presentation should be done in front of the team with a writen report made in
