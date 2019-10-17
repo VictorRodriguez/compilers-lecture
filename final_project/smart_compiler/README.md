@@ -67,7 +67,7 @@ Teams have to deliver:
 
 	* Printed report
 	* Printed LateX code
-	* Send presentation to proffesor
+	* Send presentation to profesor
 
 Resources:
 	* https://www.epaperpress.com/lexandyacc/intro.html
