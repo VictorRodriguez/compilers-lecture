@@ -48,6 +48,12 @@ Take as help the page:
 
 https://emojitranslate.com/
 
+Other examples of inputs could be:
+
+* Hmm this is a rather interesting little app.
+* It's really sad that not enough puppies are adopted every year.
+* This thing totally sucks! Who's idea was this anyways?!
+
 ## Report and presentation
 
 Presentation should be done in front of the team with a writen report made in
