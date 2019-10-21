@@ -31,7 +31,7 @@ float c[256] = {0};
 int main(){
 	for(int x = 0; x < 10000000; x++)
 		for (int i=0; i<256; i++){
-			a[i] = a[i] + b[i];
+			c[i] = a[i] + b[i];
 		}
 }
 
