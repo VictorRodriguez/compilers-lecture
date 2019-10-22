@@ -14,9 +14,11 @@ Understand the optimizations generated from the compiler toolchain
 Most C compilers (including the GCC compilers) allow a user to examine the
 machine instructions generated for a given source program. Run the following
 program through such a C compiler and examine the instructions generated for
-the for loop. Next, recompile the program, enabling optimization[1] [3], and
-reexamine the instructions generated for the for loop. What improvements have
-been made?
+the for loop. Next, recompile the program, enabling
+optimization[1](https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html)
+[3](https://blog.linuxplumbersconf.org/2016/ocw/system/presentations/3795/original/GCC.pdf)
+, and reexamine the instructions generated for the for loop. What improvements
+have been made?
 
 Assuming that the program spends all of its time in the for loop, estimate the
 speedup obtained. Write a suitable main C function that allocates and
@@ -36,7 +38,8 @@ int proc(int a[]) {
 
 ## How teacher is going to review:
 
-* Make a report following the next [overleaf template]
+* Make a report following the next [overleaf template](https://github.com/VictorRodriguez/operating-systems-lecture/blob/master/projects/report.tex)
+
 * Sections that are necesary:
 	* Title
 	* Abstract
@@ -52,7 +55,8 @@ int proc(int a[]) {
 	* optimizations.c
 	* Makefile
 
-More background about compiler optimizations at [2]
+More background about compiler optimizations at [2](https://www.youtube.com/watch?v=jVYnT_onb70)
+
 
 ## Please send the mail as git send mail:
 
@@ -71,8 +75,4 @@ will get the mail
 
 One week from the moment the mail is sent to students
 
-[1](https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html)
-[2](https://www.youtube.com/watch?v=jVYnT_onb70)
-[3](https://blog.linuxplumbersconf.org/2016/ocw/system/presentations/3795/original/GCC.pdf)
-[overleaf template](https://github.com/VictorRodriguez/operating-systems-lecture/blob/master/projects/report.tex)
 
