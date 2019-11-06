@@ -107,3 +107,4 @@ Other good books :
 * Principles of Compiler Design Textbook by Alfred Aho and Jeffrey Ullman
 * Compilers: Principles, Techniques, and Tools; Alfred Aho, Jeffrey Ullman, Monica S. Lam, and Ravi Sethi
 * Languages and Machines: An Introduction to the Theory of Computer Science [3rd Edition](https://www.amazon.com/Languages-Machines-Introduction-Computer-Science/dp/0321322215)
+* Assembly Language Step-by-Step: Programming with Linux 3rd Edition by Jeff Duntemann
