@@ -1,3 +1,4 @@
+// check the dot output in http://www.webgraphviz.com/
 
 unsigned euclid(unsigned a, unsigned b) {
 	while (a != b)
