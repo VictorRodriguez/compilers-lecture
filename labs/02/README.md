@@ -69,11 +69,11 @@ Or modify to insert some errors  and comments like hello-errors.c:
 
 ```
     ./my_compiler hello.c
-    There is a missing {  error in this line: (print line)
-    There is a missing "  error in this line: (print line)
+    There is a missing { (optional : error in this line: 
+    There is a missing " (optional : error in this line: 
 ```
 
-If your code can detect that you are more than fine
+If your code can detect these errors it is more than fine.
 
 
 ## Please send the mail as git send mail:
