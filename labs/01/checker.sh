@@ -1,5 +1,4 @@
-#!/usr/bin/bash
-
+#!/bin/bash
 
 if [ -f "test.patch" ]
 then
