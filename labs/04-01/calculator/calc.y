@@ -1,108 +1,64 @@
 %{
 #include <stdio.h>
-int regs[26];
-int base;
+#include <stdlib.h>
+#include <math.h>
+
+int ids[26];
+int values[26];
+extern FILE *yyin;
 %}
-%start list
-%token DIGIT LETTER
-%left '|'
-%left '&'
+
+%token ID NUMBER
 %left '+' '-'
-%left '*' '/' '%'
-%left UMINUS  /*supplies precedence for unary minus */
-%%                   /* beginning of rules section */
-list:                       /*empty */
-         |
-        list stat '\n'
-         |
-        list error '\n'
-         {
-           yyerrok;
-         }
-         ;
-stat:    expr
-         {
-           printf("%d\n",$1);
-         }
-         |
-         LETTER '=' expr
-         {
-           regs[$1] = $3;
-         }
-         ;
-expr:    '(' expr ')'
-         {
-           $$ = $2;
-         }
-         |
-         expr '*' expr
-         {
-           $$ = $1 * $3;
-         }
-         |
-         expr '/' expr
-         {
-           $$ = $1 / $3;
-         }
-         |
-         expr '%' expr
-         {
-           $$ = $1 % $3;
-         }
-         |
-         expr '+' expr
-         {
-           $$ = $1 + $3;
-         }
-          |
-         expr '-' expr
-         {
-           $$ = $1 - $3;
-         }
-         |
-         expr '&' expr
-         {
-           $$ = $1 & $3;
-         }
-         |
-         expr '|' expr
-         {
-           $$ = $1 | $3;
-         }
-         |
-        '-' expr %prec UMINUS
-         {
-           $$ = -$2;
-         }
-         |
-         LETTER
-         {
-           $$ = regs[$1];
-         }
-         |
-         number
-         ;
-number:  DIGIT
-         {
-           $$ = $1;
-           base = ($1==0) ? 8 : 10;
-         }       |
-         number DIGIT
-         {
-           $$ = base * $1 + $2;
-         }
-         ;
+%left '*' '/'
 %%
-main()
+
+start: statement
+  | statement start
+  ;
+
+statement: ID '=' expression              { ids[$1] = $3;}
+ | 'p' ID                                 { if(values[$2] != 0) printf("%d\n", ids[$2]); else yyerror("syntax error");}
+ | 'i' ID                                 { values[$2] = 1;}
+ | expression
+ ;
+
+expression: expression '+' expression   			{ $$ = $1 + $3;}
+ | expression '-' expression           				{ $$ = $1 - $3;}
+ | expression '*' expression                  { $$ = $1 * $3;}
+ | expression '/' expression                  { if($3 != 0) $$ = $1 / $3; else yyerror("syntax error");}
+ | NUMBER                              				{ $$ = $1;}
+ | ID                                     { $$ = ids[$1];}
+ ;
+%%
+
+
+int main(argc,argv)
+int argc ;
+char **argv;
 {
- return(yyparse());
+       if (argc > 1) {
+               FILE *file;
+
+               file = fopen(argv[1], "r" ) ;
+               if (!file) {
+                       fprintf(stderr,"could not open %s\n",argv[1]);
+                       exit(1);
+               }
+               yyin = file;
+       }
+       do {
+               yyparse();
+       } while (!feof(yyin));
+       return 0;
 }
-yyerror(s)
+
+int yyerror(s)
 char *s;
 {
   fprintf(stderr, "%s\n",s);
 }
-yywrap()
+int yywrap()
 {
   return(1);
 }
