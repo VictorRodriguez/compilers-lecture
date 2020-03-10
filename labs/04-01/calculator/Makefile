@@ -1,7 +1,7 @@
 all:
 	yacc -d calc.y
-	lex calc.l
-	gcc -ll lex.yy.c y.tab.c y.tab.h -o calc
+	flex calc.l
+	gcc -lfl lex.yy.c y.tab.c y.tab.h -o calc
 
 clean:
 	rm -rf *.c
