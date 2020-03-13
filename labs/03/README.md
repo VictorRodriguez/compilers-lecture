@@ -98,7 +98,7 @@ python3 code_generator.py > example.ac
 * Compile and execute as follows:
 
 ```
-lex my_homework.l (the lex code you generate in your homework)
+lex lexic_analyzer.l (the lex code you generate in your homework)
 gcc lex.yy.c -o lexical_scan -lfl
 ./lexical_scan <source code for ac language like example.ac>
 ```
@@ -116,7 +116,7 @@ print id
 ## Please send the mail as git send mail:
 
 ```
-    $ git add lexic_analyzer.c
+    $ git add lexic_analyzer.l
     $ git commit -s -m <STUDENT-ID>-homework-03
     $ git send-email -1
 
