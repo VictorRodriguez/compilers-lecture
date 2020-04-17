@@ -1,52 +1,78 @@
 #include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
 
 //FIXME
 
 /***************************
 Example:
-Grammar: E --> i E'
+Grammar:
+E --> i E'
 E' --> + i E' | e
 ***************************/
 
-int main()
-{
-    // E is a start symbol.
-    E();
+char l;
 
-    // if lookahead = $, it represents the end of the string
-    // Here l is lookahead.
-    if (l == '$')
-        printf("Parsing Successful");
+
+bool E_alpha();
+bool E_alpha_1();
+bool E_alpha_2();
+
+void error(){
+	printf("Error\n");
+	exit(-1);
 }
-
-// Definition of E, as per the given production
-E()
-{
-    if (l == 'i') {
-        match('i');
-        E'();
+// Match function
+bool match(char t) {
+    if (l == t) {
+        l = getchar();
+		return true;
     }
+    else
+		error();
 }
 
 // Definition of E' as per the given production
-E'()
-{
+bool E_alpha(){
+	if(E_alpha_1() || E_alpha_2()){
+		return true;
+	}
+}
+
+// Definition of E_1' as per the given production
+bool E_alpha_2() {
+	if (l == 'i')
+		return match('i');
+}
+
+// Definition of E_2' as per the given production
+bool E_alpha_1() {
     if (l == '+') {
-        match('+');
-        match('i');
-        E'();
+		if(match('+') && match('i') && E_alpha())
+			return true;
     }
-    else
-        return ();
 }
 
-// Match function
-match(char t)
-{
-    if (l == t) {
+// Definition of E, as per the given production
+bool E() {
+    if (l == 'i') {
+        if (match('i') && E_alpha()){
+			return true;
+		}
+    }else{
+		error();
+	}
+}
+
+int main() {
+
+    do {
         l = getchar();
-    }
-    else
-        printf("Error");
-}
+		// E is a start symbol.
+	    E();
 
+    } while (l != '\n' && l != EOF);
+
+    if (l == '\n')
+        printf("Parsing Successful\n");
+}
