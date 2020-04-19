@@ -1,4 +1,4 @@
-# Lab 05 instructions
+# Lab 05 v3 instructions
 
 ## Objective
 
@@ -23,7 +23,19 @@ Create a program in C that taking as an example the gramar in Figure 1:
 * Print the AST graph using [DOT grapviz](http://www.graphviz.org) library
 
 ![gramar](gramar_image.png)
+
 Figure 1
+
+Example of tokens.txt:
+
+```
+floatdcl id
+intdcl id
+id assign inum
+id assign id plus fnum
+print id
+
+```
 
 ## Expected result:
 ```
