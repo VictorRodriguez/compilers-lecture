@@ -1,7 +1,7 @@
 all:
 	yacc -d simplecalc.y
-	flex simplecalc.l
-	gcc -lfl lex.yy.c y.tab.c y.tab.h -o simplecalc
+	lex simplecalc.l
+	gcc y.tab.c lex.yy.c -ly -ll -o simplecalc
 
 clean:
 	rm -rf simplecalc

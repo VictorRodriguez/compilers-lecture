@@ -7,7 +7,15 @@ extern int yylval;
 %}
 %%
 " "       ;
-[a-z]     {
+i   {
+    yylval = atoi(yytext);
+    return(IDCL);
+    }
+p   {
+    yylval = atoi(yytext);
+    return(PRINT);
+    }
+[a-h]|[j-o]|[q-z]     {
             c = yytext[0];
             yylval = c - 'a';
             return(LETTER);

@@ -4,7 +4,7 @@ int regs[26];
 int base;
 %}
 %start list
-%token DIGIT LETTER
+%token DIGIT LETTER IDCL PRINT
 %left '|'
 %left '&'
 %left '+' '-'
@@ -29,6 +29,16 @@ stat:    expr
          {
            regs[$1] = $3;
          }
+         |
+         IDCL LETTER
+         {
+            regs[$2] = 0;
+         }
+         |
+         PRINT LETTER
+         {
+            printf("%d\n",regs[$2]);
+         }
          ;
 expr:    '(' expr ')'
          {
@@ -42,6 +52,10 @@ expr:    '(' expr ')'
          |
          expr '/' expr
          {
+           if ($3 == 0){
+            $$ = 0;
+            yyerror("Division by 0");
+           }else
            $$ = $1 / $3;
          }
          |
