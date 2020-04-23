@@ -49,11 +49,14 @@ Your sytax tree should:
 * Detect if each list of tokens has a sytanx error
 * If it does not have a syntax error, print the AST graph using [DOT
 grapviz](http://www.graphviz.org) library
+* Test the output in: [webgraphviz](http://www.webgraphviz.com/)
+
+
 
 ## Please send the mail as git send mail:
 
 ```
-    $ git add lex_analaizer.c
+    $ git add syntax_analaizer.c
     $ git commit -s -m <STUDENT-ID>-homework-04
     $ git send-email -1
 
