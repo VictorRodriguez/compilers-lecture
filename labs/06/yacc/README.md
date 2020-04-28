@@ -1,4 +1,4 @@
-# Lab 05 v3 instructions
+# Lab 06 v2 instructions
 
 ## Objective
 
