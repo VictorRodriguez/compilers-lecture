@@ -49,7 +49,7 @@ Your sytax tree should:
 
 ```
     $ git add syntax_analaizer.c
-    $ git commit -s -m <STUDENT-ID>-homework-04
+    $ git commit -s -m <STUDENT-ID>-homework-06
     $ git send-email -1
 
 ```
