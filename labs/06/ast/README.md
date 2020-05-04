@@ -83,3 +83,7 @@ will get the mail
 
 One week from the moment the mail is sent to students
 
+## References to use:
+
+* [SYNTAX-DIRECTED-TRANSLATION](http://pages.cs.wisc.edu/~fischer/cs536.s06/course.hold/html/NOTES/4.SYNTAX-DIRECTED-TRANSLATION.html)
+
