@@ -48,19 +48,19 @@ make ( compile everything )
 Example of CODEFILE:
 
 ```
-5 + (2 + 3)
-5 + (2 + (2+4))
+5 + (2 - 3)
+5 + (2 * (2+4))
 (3+1)
 ```
 
 Example of output:
 
 ```assembly
-add 2,3,acum
+sub 2,3,acum
 add &acum,5,acum
 
 add 2,4,acum
-add &acum,2,acum
+mul &acum,2,acum
 add &acum,5,acum
 
 add 3,1,acum
