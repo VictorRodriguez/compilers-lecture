@@ -26,6 +26,7 @@ And the string
 Create a C code that:
 
 * Do a top down parsing to check if a string is valid
+* Consider input of 1 digit (10 +2 is not valid) to make it more simple
 * Generate an abstract syntax tree and generate Syntax-Directed Translation
 * Produce the output:
 
