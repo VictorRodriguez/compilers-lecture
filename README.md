@@ -81,6 +81,10 @@ Extra topic Trainings ( in case you need them )
     * https://drive.google.com/open?id=0B7iKrGdVkDhIUzZTVTduczJrQTg
   * GCC ROP attacks workshop:
     * https://github.com/VictorRodriguez/operating-systems-lecture/tree/master/labs/gcc/security
+  * Makefile trainings:
+    * [Tutorial 1](https://www.tutorialspoint.com/makefile/index.html)
+    * [Tutorial 2](https://www.coursera.org/lecture/introduction-embedded-systems/6-make-18etg)
+    * [Tutorial 3](https://github.com/lifeissweetgood/makefile-tutorial)
 
 Ponderation:
 
