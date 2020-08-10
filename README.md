@@ -8,7 +8,7 @@ This is plan to be deliverable in a period of time of 4 to 6 months. It is
 adjustable in time and order; however the expectations and basic topics should
 keep the essence of the plan.
 
-Agenda:
+## Agenda:
 
 * [Introduction to compilers](https://drive.google.com/open?id=18-tj7JEHmfY9QH7tDWEB0FHgfZslgUd3FQmgZh4uMCQ)
   * Language Processors
@@ -69,7 +69,7 @@ Agenda:
 * [Code optimization](https://drive.google.com/open?id=1sEwM70e70PzgdeEZ3g348ai_0xCntddm5W0nrFdxbrc)
 
 
-Extra topic Trainings ( in case you need them )
+## Extra topic Trainings ( in case you need them )
   * Git training
     * https://drive.google.com/file/d/0B7iKrGdVkDhINERiQnppOU5IVVk/view?usp=sharing
   * Bash Trainings:
@@ -86,7 +86,7 @@ Extra topic Trainings ( in case you need them )
     * [Tutorial 2](https://www.coursera.org/lecture/introduction-embedded-systems/6-make-18etg)
     * [Tutorial 3](https://github.com/lifeissweetgood/makefile-tutorial)
 
-Ponderation:
+## Ponderation:
 
  * 35% First Term
    * 15% Weekly Quizzes
@@ -101,12 +101,12 @@ Ponderation:
 * 30% Final Exam ( if student decides to do final project it is = 10% and final
   exam 20 % )
 
-Bibliography:
+## Bibliography:
 
-Mian Book : 
-* Crafting a Compiler with C, by Charles N. Fischer 
+### Mian Book : 
+* Crafting a Compiler, by Charles N. Fischer 
 
-Other good books :
+### Other good books :
 
 * Introduction to computer theory Book by Daniel I. A. Cohen
 * Principles of Compiler Design Textbook by Alfred Aho and Jeffrey Ullman
