@@ -124,7 +124,7 @@ print id
 Do some tests sending the mail to your personal account, if you get the mail,
 then you can be sure I will get the mail
 
-## Performance test
+## Performance test (Extra work, not mandatory for the lab)
 
 The code generation has an option to generate stress examples:
 
