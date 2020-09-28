@@ -36,13 +36,18 @@ bool match(char t) {
 bool E_alpha(){
 	if(E_alpha_1() || E_alpha_2()){
 		return true;
+	}else{
+		error();
 	}
 }
 
 // Definition of E_1' as per the given production
 bool E_alpha_2() {
-	if (l == 'i')
-		return match('i');
+	if (l == '\n'){
+		return true;
+	}else{
+		return false;
+	}
 }
 
 // Definition of E_2' as per the given production
@@ -50,7 +55,9 @@ bool E_alpha_1() {
     if (l == '+') {
 		if(match('+') && match('i') && E_alpha())
 			return true;
-    }
+    }else{
+		return false;
+	}
 }
 
 // Definition of E, as per the given production
