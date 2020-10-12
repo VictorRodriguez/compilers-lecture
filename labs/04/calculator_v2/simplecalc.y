@@ -5,7 +5,7 @@
 %token NAME NUMBER
 %%
 
-statement: NAME '=' expression
+statement: NAME '=' expression		{printf("= %d\n", $3);}
  | expression 						{printf("= %d\n", $1);}
  ;
 expression: expression '+' NUMBER   { $$ = $1 + $3;}
