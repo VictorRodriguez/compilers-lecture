@@ -99,11 +99,22 @@ https://renenyffenegger.ch/notes/tools/Graphviz/examples/index
 ## Please send the mail as git send mail:
 
 ```
-    $ git add syntax-calc.c Makefile
+    $ git add syntax-calc.c lexic_analyzer.c Makefile
     $ git commit -s -m <STUDENT-ID>-homework-07
     $ git send-email -1
 
 ```
+
+Or if you use YACC
+
+
+```
+    $ git add syntax-calc.y lexic_analyzer.l Makefile
+    $ git commit -s -m <STUDENT-ID>-homework-07
+    $ git send-email -1
+
+```
+
 Do some tests sending the mail to your personal
 account, if you get the mail, then you can be sure I
 will get the mail
