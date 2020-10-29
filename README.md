@@ -85,6 +85,8 @@ keep the essence of the plan.
     * [Tutorial 1](https://www.tutorialspoint.com/makefile/index.html)
     * [Tutorial 2](https://www.coursera.org/lecture/introduction-embedded-systems/6-make-18etg)
     * [Tutorial 3](https://github.com/lifeissweetgood/makefile-tutorial)
+  * GDB tutorial:
+    * [GDB 101](https://docs.google.com/presentation/d/1aaExMhw1xqWeX8uiUNKiuDD1ZWlIcm5v3wWCn1rlc-w/edit?usp=sharing)
 
 ## Ponderation:
 
