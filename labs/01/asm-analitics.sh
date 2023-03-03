@@ -1,9 +1,8 @@
 #!/usr/bin/bash
 
-echo 'hi, this is done :)'
+MOVS=$(grep mov log | wc -l)
+JMPS=$(grep jmp log | wc -l)
 
-echo 'mistake'
+echo "Total of movs: " $MOVS
+echo "Total of jmps: " $JMPS
 
-echo 'esta es mi tarea'
-
-echo "im doing something else"
