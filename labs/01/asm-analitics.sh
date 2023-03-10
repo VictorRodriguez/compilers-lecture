@@ -3,7 +3,7 @@
 if test $# -eq 1
 then
         # $1 variable para el parametro
-        cat $1 | cut -c -32 --complement  | tr ' ' @ |  cut -f1 -d@ | egrep -v : | sed '/^$/d' | tail -n +2 | sort | uniq -c | tr ' ' % | t>
+        cat $1 | cut -c -32 --complement  | tr ' ' @ |  cut -f1 -d@ | egrep -v : | sed '/^$/d' | tail -n +2 | sort | uniq -c | tr ' ' % | t> % | tr -s % | cut -c -1 --complement > Instrucciones
 
         # inst variable de numero de instrucciones
         inst=`cat Instrucciones | wc -l`
