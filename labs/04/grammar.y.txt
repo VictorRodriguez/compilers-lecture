@@ -13,7 +13,7 @@
 
 sentence:
   noun_phrase verb_phrase
-  { printf("Valid sentence.\n"); }
+  { printf("PASS\n"); }
 ;
 
 noun_phrase:
@@ -47,6 +47,6 @@ int main(void) {
 }
 
 void yyerror(const char *msg) {
-  printf("Error: %s\n", msg);
+  printf("FAIL\n", msg);
   exit(1);
 }
