@@ -1,0 +1,52 @@
+%{
+#include <stdio.h>
+#include <stdlib.h>
+%}
+
+%token ART NOUN VERB PREP
+%token<ART> ARTICLE
+%token<NOUN> BOY GIRL FLOWER
+%token<VERB> TOUCHES LIKES SEES
+%token<PREP> WITH
+
+%%
+
+sentence:
+  noun_phrase verb_phrase
+  { printf("Valid sentence.\n"); }
+;
+
+noun_phrase:
+  complex_noun
+  | complex_noun prep_phrase
+;
+
+verb_phrase:
+  complex_verb
+  | complex_verb prep_phrase
+;
+
+prep_phrase:
+  PREP complex_noun
+;
+
+complex_noun:
+  ARTICLE NOUN
+;
+
+complex_verb:
+  VERB
+  | VERB noun_phrase
+;
+
+%%
+
+int main(void) {
+  yyparse();
+  return 0;
+}
+
+void yyerror(const char *msg) {
+  printf("Error: %s\n", msg);
+  exit(1);
+}
