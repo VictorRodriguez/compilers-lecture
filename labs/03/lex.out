@@ -1,0 +1,5 @@
+floatdcl id
+intdcl id
+id assign inum
+id assign id div inum
+print intdcl
