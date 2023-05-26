@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+int array_test[256];
 
 float foo(){
     float a,c = 1;
