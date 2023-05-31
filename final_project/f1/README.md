@@ -18,10 +18,18 @@ or
 ```
 Retrieve all the results that meet the specified criteria: more than 10 points and less than 40 laps
 ```
+This will go in a file input.txt
 
 Your team can decide how to define your grammar
 
 Once you have your grammar please use YACC and LEX to generate a compiler that must generate the next 2 lines
+
+
+```
+./mycompiler input.txt
+
+```
+as a result it will print: 
 
 ```
 import pandas as pd
