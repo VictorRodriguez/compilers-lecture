@@ -8,7 +8,7 @@ void yyerror(const char *s);
 %token NAME NUMBER
 %%
 
-statement: NAME '=' expression		{printf("= %d\n", $3);}
+statement: NAME '=' expression		{printf("%c = %d\n", $1,$3);}
  | expression 						{printf("= %d\n", $1);}
  ;
 expression: expression '+' NUMBER   { $$ = $1 + $3;}
