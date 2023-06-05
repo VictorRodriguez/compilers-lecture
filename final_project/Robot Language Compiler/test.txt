@@ -1,0 +1,20 @@
+please go forward 3 blocks
+please turn left 90 degrees
+please go backward 5 blocks
+please go right 2 blocks
+please turn right 45 degrees
+please go forward 10 blocks
+please turn left 180 degrees
+please go backward 7 blocks
+please go left 4 blocks
+please turn right 270 degrees
+please go forward blocks
+please turn left degrees
+please go backward blocks
+please go right blocks
+please turn right degrees
+please go forward blocks
+please turn left degrees
+please go backward blocks
+please go left blocks
+please turn right degrees
