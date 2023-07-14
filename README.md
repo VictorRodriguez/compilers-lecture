@@ -1,4 +1,4 @@
-![image](https://github.com/VictorRodriguez/compilers-lecture/assets/327548/11e624af-db51-4480-8461-609c5fec1824)# compilers-lecture
+# compilers-lecture
 
 This GIT repository contains a list of workshops and labs for compilers' design
 lecture. The level of complexity is for undergraduate students of computer
