@@ -87,7 +87,8 @@ keep the essence of the plan.
     * [Tutorial 3](https://github.com/lifeissweetgood/makefile-tutorial)
   * GDB tutorial:
     * [GDB 101](https://docs.google.com/presentation/d/1aaExMhw1xqWeX8uiUNKiuDD1ZWlIcm5v3wWCn1rlc-w/edit?usp=sharing)
-
+  * CFG tool:
+    * [Tool](https://web.stanford.edu/class/archive/cs/cs103/cs103.1156/tools/cfg/)
 ## Ponderation:
 
  * 35% First Term
