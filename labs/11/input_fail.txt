@@ -1,0 +1,9 @@
+i h
+f t
+f a
+i b
+a = 12
+t = 15
+b = a + t
+p b
+p s
