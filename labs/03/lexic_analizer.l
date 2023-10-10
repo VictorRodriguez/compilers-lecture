@@ -1,5 +1,5 @@
 /* 
-Daniel Flores Rodríguez A01734184
+Daniel Flores Rodríguez-A01734184
 Last mod: 10-10-23
 
 Lexical analizer, for AC (Adding calculator)
