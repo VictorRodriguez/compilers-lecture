@@ -14,6 +14,21 @@ Lexical analizer, for AC (Adding calculator)
     - The ac Language offers only 23 possible variables names, drawn in lower case Roman alphabet and excluding the three reserved keywords f,i and p
 - operators
     - The AC language offers onlye 5 basic operators: +, -, /, =, *
+
+-In order to compile and execute the analizer:
+in the root of the /03 Folder, execute next command:
+
+$ lex lexic_analizer.l
+
+Then compile with gcc the .c File with the following command:
+
+$ gcc lex.yy.c -o lexical_scan -ll
+
+Finaly execute lexic_analizer.l with the example.ac File:
+
+$ ./lexic_analizer.l < example.ac
+
+
 */
 %{
 #include <stdio.h>
