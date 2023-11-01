@@ -25,6 +25,7 @@ bool B_1();
 bool B_2();
 bool B_3();
 
+
 void error(){
 	printf("Error\n");
 	exit(-1);
