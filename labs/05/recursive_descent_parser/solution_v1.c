@@ -7,8 +7,9 @@
 /***************************
 Example:
 Grammar:
-E --> i E'
+E --> i E'A
 E' --> + i E' | e
+A --> ;
 ***************************/
 
 char l;
@@ -17,6 +18,9 @@ char l;
 bool E_alpha();
 bool E_alpha_1();
 bool E_alpha_2();
+bool E_alpha_3();
+bool E_alpha_4();
+bool E_alpha_5();
 
 void error(){
 	printf("Error\n");
@@ -32,12 +36,38 @@ bool match(char t) {
 		error();
 }
 
+bool E_alpha_5() {
+	if (l == ';') {
+			return true;
+		}else{
+		return false;
+	}
+}
+
 // Definition of E' as per the given production
 bool E_alpha(){
-	if(E_alpha_1() || E_alpha_2()){
+	if(E_alpha_1() || E_alpha_2() || E_alpha_3() || E_alpha_4()){
 		return true;
 	}else{
 		error();
+	}
+}
+
+bool E_alpha_4() {
+	if (l == '*') {
+		if(match('*') && match('i') && E_alpha())
+			return true;
+		}else{
+		return false;
+	}
+}
+
+bool E_alpha_3() {
+	if (l == '-') {
+		if(match('-') && match('i') && E_alpha())
+			return true;
+		}else{
+		return false;
 	}
 }
 
@@ -63,7 +93,7 @@ bool E_alpha_1() {
 // Definition of E, as per the given production
 bool E() {
     if (l == 'i') {
-        if (match('i') && E_alpha()){
+        if (match('i') && E_alpha() && E_alpha_5()){
 			return true;
 		}
     }else{
