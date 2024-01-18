@@ -56,8 +56,7 @@ print id
 
 ## Expected result:
 
-* Code a lex_analaizer.c that fulfill the requirements
-* Code a Makefile for this code
+* Code a lex_analaizer.L that fulfill the requirements
 * Generate a random AC code with:
 
 ```
@@ -68,7 +67,6 @@ python3 code_generator.py > example.ac
 * Compile your code with the makefile and execute as follows:
 
 ```
-gcc lex_analaizer.c -o lex_analaizer
 ./lex_analaizer example.ac
 ```
 
