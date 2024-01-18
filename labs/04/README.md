@@ -74,7 +74,7 @@ python3 code_generator.py > example.ac
 ## Please send the mail as PR:
 
 ```
-    $ git add lex_analaizer.c
+    $ git add lex_analaizer.l
     $ git commit -s -m <STUDENT-ID>-homework-04
 ```
 Do some tests sending the mail to your personal account, if you get the mail,
