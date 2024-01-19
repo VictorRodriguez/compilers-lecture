@@ -7,6 +7,8 @@ all:
 	gcc lex.yy.c -o example2 -lfl
 	lex example3.l
 	gcc lex.yy.c -o example3 -lfl
+	lex test.l
+	gcc lex.yy.c -o test -lfl
 
 clean:
 	rm -rf *.c
@@ -14,3 +16,4 @@ clean:
 	rm -rf example1
 	rm -rf example2
 	rm -rf example3
+	rm -rf test
