@@ -1,12 +1,12 @@
 all:
 	lex example0.l
-	gcc lex.yy.c -o example0 -ll
+	gcc lex.yy.c -o example0 -lfl
 	lex example1.l
-	gcc lex.yy.c -o example1 -ll
+	gcc lex.yy.c -o example1 -lfl
 	lex example2.l
-	gcc lex.yy.c -o example2 -ll
+	gcc lex.yy.c -o example2 -lfl
 	lex example3.l
-	gcc lex.yy.c -o example3 -ll
+	gcc lex.yy.c -o example3 -lfl
 
 clean:
 	rm -rf *.c
