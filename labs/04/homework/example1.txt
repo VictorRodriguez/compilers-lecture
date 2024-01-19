@@ -1,0 +1,8 @@
+variable = 42
+pi = 3.14
+mensaje = "Hola, mundo!"
+suma = 5 + 7
+resta = 10 - 3
+producto = 2 * 4
+division = 20 / 4
+// Este es un comentario de una sola línea
