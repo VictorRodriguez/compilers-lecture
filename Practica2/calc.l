@@ -3,13 +3,8 @@
 
 enum {
       LOOKUP =0, /* default - looking rather than defining. */
-      VERB,
-      ADJ,
-      ADV,
-      NOUN,
-      REP,
-      PRON,
-      CONJ
+      FLOATING,
+      INTEGER
 };
 
 int state;
