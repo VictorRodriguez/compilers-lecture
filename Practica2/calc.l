@@ -19,6 +19,12 @@ int lookup_word(char *word);
 [a-zA-Z][a-zA-Z0-9]*    printf("WORD\n");
 %%
 
+\n    { state = LOOKUP; }   /* end of line, return to default state */
+      /* whenever a line starts with a reserved part of speech name */
+      /* start defining words of that type */
+^f { state = FLOATING; }
+^i  { state = INTEGER; }
+
 int main(int argc, char **argv) {
     FILE    *fd;
 
