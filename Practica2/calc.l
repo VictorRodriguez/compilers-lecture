@@ -7,10 +7,11 @@
 
 f       { printf("floatdcl "); }
 i       { printf("intdcl "); }
-p       { printf("print"); }
+p       { printf("print "); }
 \n      { printf("\nCOMMENT \n"); }
 [a-e g-h j-o q-z]+   { printf("id "); }
 [0-9]+  { printf("inum "); }
+[-+]?[0-9]*[.][0-9]+ { printf("fnum "); }
 "="       { printf("assign "); }
 "+"      { printf("plus "); }
 "*"     {printf("multiplication ");}
