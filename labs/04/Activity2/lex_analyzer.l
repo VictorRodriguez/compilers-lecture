@@ -4,6 +4,7 @@
 
 %%
 
+
 [//][a-zA-Z][a-zA-Z0-9]*                                    {printf("COMMENT :)\n"); }
 [f][ \t]*[a-zA-Z]+                                          {printf("floatdcl id\n");} 
 [i][ \t]*[a-zA-Z]+                                          {printf("intdcl id\n");} 
@@ -15,6 +16,7 @@
 [a-zA-Z]+[ \t]*[=][ \t]*[a-zA-Z]+[ \t]*[/][ \t]*[0-9]+      {printf("id assign id divided by inum\n");}    
 [p][ \t]*[a-zA-Z]+                                          {printf("print id\n"); }
 [\t]+                                                       {/* ignore whitespace */ ;}
+
 
 %%
 
