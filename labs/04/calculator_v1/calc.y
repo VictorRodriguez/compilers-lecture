@@ -107,7 +107,7 @@ number:  DIGIT
          }
          ;
 %%
-main()
+int main()
 {
  return(yyparse());
 }
