@@ -3,16 +3,17 @@
 %}
 // Reglas de Expresiones Regulares y Acciones:
 %%
-\/\/.*                  { printf("COMMENT\n"); }
-[0123456789]+           { printf("NUMBER\n"); }
-[a-zA-Z][a-zA-Z0-9]*    { printf("WORD\n"); }
-int                     { printf("intdcl "); }
-[0-9]+                  { printf("inum "); }
-[0-9]+"."[0-9]+         { printf("fnum "); }
-"="                     { printf("assign "); }
-"plus"                  { printf("plus "); }
-"print"                 { printf("print "); }
-\n                      { /* ignore newlines */ }
+\/\/.*                  { printf("COMENTARIO\n"); }
+float                   { printf("DECLARAR_FLOAT "); }
+int                     { printf("DECLARAR_INT "); }
+[a-zA-Z][a-zA-Z0-9]*    { printf("IDENTIFICADOR "); }
+[0-9]+                  { printf("NUMERO_ENTERO "); }
+[0-9]+"."[0-9]+         { printf("NUMERO_DECIMAL "); }
+"="                     { printf("ASIGNAR "); }
+"plus"                  { printf("SUMAR "); }
+"print"                 { printf("IMPRIMIR "); }
+\n                      { /* ignorar saltos de línea */ }
+
 %%
 
 int main(int argc, char **argv) {
