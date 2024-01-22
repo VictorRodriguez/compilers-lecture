@@ -8,6 +8,7 @@ def id_generator(size=10, chars=string.ascii_uppercase + string.digits):
 
 opreators = ["+","-","*","/"]
 
+
 def get_comment_line():
     comment_line = "//%s" % (id_generator())
     return comment_line
