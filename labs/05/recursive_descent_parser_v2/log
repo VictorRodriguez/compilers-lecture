@@ -1,0 +1,19 @@
+graph G {
+	S -- E;
+	E -- T;
+	E -- ED;
+	T -- F;
+	T -- TD;
+	F -- (;
+	F -- E;
+	F -- );
+	E -- T;
+	E -- ED;
+	T -- F;
+	T -- TD;
+	F -- id;
+	TD -- ε;
+	ED -- ε;
+	TD -- ε;
+	ED -- ε;
+}
