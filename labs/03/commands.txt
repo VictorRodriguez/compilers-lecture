@@ -1,0 +1,4 @@
+lex grammar.l
+yacc -d grammar.y
+gcc lex.yy.c y.tab.c -o analyzer
+./analyzer example.txt
