@@ -1,0 +1,6 @@
+COMMENT
+floatdcl print 
+intdcl id 
+id assign inum 
+id assign id multiply inum 
+print id 

@@ -1,3 +1,21 @@
+# Homework 
+Nombre: Jeshua Nava Avila
+Matricula: A01639282
+Fecha: 06/05/2024
+
+## How to run (in windows)
+1. Install Flex. I followed the first answer in the next [forum](https://stackoverflow.com/questions/5456011/how-to-compile-lex-yacc-files-on-windows).
+
+2. Generate `example.ac` with `code_generator.py`.
+
+3. Create our `LexAn.l` file with our regular expressions. Be sure to include `main()` to avoid any **gcc** errors.
+
+4. Create our `lex.yy.c` file with the next command: `flex LexAn.l`.
+
+5. To create our executable, we run the command: `gcc lex.yy.c -L "C:\MinGW\msys\1.0\lib\" -lfl`. Sadly, I didn't figure out to name our executable. So, it stays with the name `a.exe`.
+
+6. For our output, we run the command: `./a.exe < example.ac > example.txt`
+
 # Lab 04 instructions
 
 ## Objective
