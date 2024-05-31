@@ -1,126 +1,139 @@
-# Lab 07 instructions
+# Practice Exercise: Building a Simple Chatbot with `lex` and `yacc`
 
-## Objective
+#### Objective
+In this exercise, you will create a simple chatbot using `lex` (for lexical analysis) and `yacc` (for parsing). The chatbot will be able to respond to greetings, queries about the time, and farewells. This practice will help you understand how to use `lex` and `yacc` to build a basic interactive application.
 
-Make the student create a CFG for the calculator previusly created using YACC
+#### Prerequisites
+- Basic understanding of C programming.
+- Familiarity with `lex` and `yacc` tools.
+- Basic knowledge of lexical analysis and parsing.
 
-# Requirements
+#### Instructions
 
-* Linux machine, either a VM or a bare metal host
-* GCC compiler
-* git send mail server installed and configured on your Linux machine
-* YACC
+1. **Setup Your Environment**:
+   - Ensure you have `lex` (or `flex`) and `yacc` (or `bison`) installed on your system.
+   - Create a working directory for this exercise.
 
-## Instructions
-Taking as imput the following code:
+2. **Create the Lex Specification**:
+   - Create a file named `chatbot.l`.
+   - Define patterns to match user inputs for greetings, farewells, and time queries.
 
-```
-$ cat FILE
+   ```c
+   %{
+   #include "y.tab.h"
+   %}
 
-// basic code
+   %%
 
-//float b
-f b
+   hello           { return HELLO; }
+   hi              { return HELLO; }
+   hey             { return HELLO; }
+   goodbye         { return GOODBYE; }
+   bye             { return GOODBYE; }
+   time            { return TIME; }
+   what[' ']is[' ']the[' ']time  { return TIME; }
+   what[' ']time[' ']is[' ']it  { return TIME; }
+   \n              { return 0; }  /* End of input on newline */
 
-// integer a
-i a
+   .               { return yytext[0]; }
 
-// a = 5
-a = 5
+   %%
 
-// b = a + 3.2
-b = a + 3.2
+   int yywrap() {
+       return 1;
+   }
+   ```
 
-//print 8.5
-p b
-```
-Reuse the code created in lab 04 to generate:
+3. **Create the Yacc Specification**:
+   - Create a file named `chatbot.y`.
+   - Define grammar rules to handle different types of user inputs.
 
-```
-$ cat tokens.out
+   ```c
+   %{
+   #include <stdio.h>
+   #include <time.h>
 
-floatdcl id
-intdcl id
-id assign inum
-id assign id plus fnum
-print id
-```
-IMPORTANT: calculator should accept + - * / as operator
+   void yyerror(const char *s);
+   int yylex(void);
+   %}
 
+   %token HELLO GOODBYE TIME
 
-Before we reuse our code from lab 05 to:
+   %%
 
-	* Detect nonterminals that cannot be reached from a CFG’s goal symbol.
-	* Detect nonterminals that cannot derive any terminal string in a CFG.
+   chatbot : greeting
+           | farewell
+           | query
+           ;
 
-Since we already did this in HW 06 is not necessary to do it again
+   greeting : HELLO { printf("Chatbot: Hello! How can I help you today?\n"); }
+            ;
 
-## How could it be tested:
-```
+   farewell : GOODBYE { printf("Chatbot: Goodbye! Have a great day!\n"); }
+            ;
 
-make ( compile everything )
+   query : TIME { 
+               time_t now = time(NULL);
+               struct tm *local = localtime(&now);
+               printf("Chatbot: The current time is %02d:%02d.\n", local->tm_hour, local->tm_min);
+            }
+          ;
 
-./lexic_analyzer <CODEFILE>
+   %%
 
-```
-This will generate the tokens.out
+   int main() {
+       printf("Chatbot: Hi! You can greet me, ask for the time, or say goodbye.\n");
+       while (yyparse() == 0) {
+           // Loop until end of input
+       }
+       return 0;
+   }
 
-Use then for generate the parse tree:
+   void yyerror(const char *s) {
+       fprintf(stderr, "Chatbot: I didn't understand that.\n");
+   }
+   ```
 
-```
-./syntax-calc tokens.out
-```
-And generate a CFG derivation tree in this format:
+4. **Compile the Lex and Yacc Files**:
+   - Open a terminal in your working directory.
+   - Run the following commands to compile the lex and yacc files:
 
-```
-digraph D {
+   ```sh
+   lex chatbot.l
+   yacc -d chatbot.y
+   cc lex.yy.c y.tab.c -o chatbot -ll -ly
+   ```
 
-  A -> {B, C, D} -> {F}
+5. **Run the Chatbot**:
+   - Execute the compiled chatbot program:
 
-}
+   ```sh
+   ./chatbot
+   ```
 
+   - Test the chatbot by typing various inputs:
+     - Greetings like "hello", "hi", or "hey".
+     - Time queries like "what is the time", "what time is it", or simply "time".
+     - Farewells like "goodbye" or "bye".
 
-IMPORTANT: Use this code as base
+6. **Extend the Chatbot**:
+   - Add more patterns and responses to the chatbot. Think of additional questions users might ask and how the chatbot should respond. For example:
+     - Ask for the chatbot's name: "what is your name".
+     - Inquire about the weather: "what is the weather".
+     - Ask how the chatbot is doing: "how are you".
 
-https://avinashsuryawanshi.files.wordpress.com/2016/10/9.pdf
+ 
+#### Submission
+Create a pull request and submit the following files:
+- `chatbot.l`
+- `chatbot.y`
 
-It will give you a basic example of how to make the AST
+Ensure your code is well-commented to explain your logic and any enhancements you made.
 
-```
+#### Assessment
+You will be evaluated on:
+- Correctness of the lexical and grammar rules.
+- Functionality of the chatbot based on the provided and additional commands.
+- Code readability and comments.
 
-View of this tree, put this code in:
-
-https://dreampuf.github.io/GraphvizOnline
-
-More info about DOT code:
-
-https://renenyffenegger.ch/notes/tools/Graphviz/examples/index
-
-## Please send the mail as git send mail:
-
-```
-    $ git add syntax-calc.c lexic_analyzer.c Makefile
-    $ git commit -s -m <STUDENT-ID>-homework-07
-    $ git send-email -1
-
-```
-
-Or if you use YACC
-
-
-```
-    $ git add syntax-calc.y lexic_analyzer.l Makefile
-    $ git commit -s -m <STUDENT-ID>-homework-07
-    $ git send-email -1
-
-```
-
-Do some tests sending the mail to your personal
-account, if you get the mail, then you can be sure I
-will get the mail
-
-
-## Time to do the homework:
-
-One week from the moment the mail is sent to students
-
+By completing this exercise, you will gain practical experience in using `lex` and `yacc` to build and extend a basic interactive application, laying the foundation for more complex projects in the future.
