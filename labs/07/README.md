@@ -1,9 +1,11 @@
 # Practice Exercise: Building a Simple Chatbot with `lex` and `yacc`
 
 #### Objective
+
 In this exercise, you will create a simple chatbot using `lex` (for lexical analysis) and `yacc` (for parsing). The chatbot will be able to respond to greetings, queries about the time, and farewells. This practice will help you understand how to use `lex` and `yacc` to build a basic interactive application.
 
 #### Prerequisites
+
 - Basic understanding of C programming.
 - Familiarity with `lex` and `yacc` tools.
 - Basic knowledge of lexical analysis and parsing.
@@ -11,10 +13,12 @@ In this exercise, you will create a simple chatbot using `lex` (for lexical anal
 #### Instructions
 
 1. **Setup Your Environment**:
+
    - Ensure you have `lex` (or `flex`) and `yacc` (or `bison`) installed on your system.
    - Create a working directory for this exercise.
 
 2. **Create the Lex Specification**:
+
    - Create a file named `chatbot.l`.
    - Define patterns to match user inputs for greetings, farewells, and time queries.
 
@@ -45,6 +49,7 @@ In this exercise, you will create a simple chatbot using `lex` (for lexical anal
    ```
 
 3. **Create the Yacc Specification**:
+
    - Create a file named `chatbot.y`.
    - Define grammar rules to handle different types of user inputs.
 
@@ -72,7 +77,7 @@ In this exercise, you will create a simple chatbot using `lex` (for lexical anal
    farewell : GOODBYE { printf("Chatbot: Goodbye! Have a great day!\n"); }
             ;
 
-   query : TIME { 
+   query : TIME {
                time_t now = time(NULL);
                struct tm *local = localtime(&now);
                printf("Chatbot: The current time is %02d:%02d.\n", local->tm_hour, local->tm_min);
@@ -95,6 +100,7 @@ In this exercise, you will create a simple chatbot using `lex` (for lexical anal
    ```
 
 4. **Compile the Lex and Yacc Files**:
+
    - Open a terminal in your working directory.
    - Run the following commands to compile the lex and yacc files:
 
@@ -105,6 +111,7 @@ In this exercise, you will create a simple chatbot using `lex` (for lexical anal
    ```
 
 5. **Run the Chatbot**:
+
    - Execute the compiled chatbot program:
 
    ```sh
@@ -122,16 +129,19 @@ In this exercise, you will create a simple chatbot using `lex` (for lexical anal
      - Inquire about the weather: "what is the weather".
      - Ask how the chatbot is doing: "how are you".
 
- 
 #### Submission
+
 Create a pull request and submit the following files:
+
 - `chatbot.l`
 - `chatbot.y`
 
 Ensure your code is well-commented to explain your logic and any enhancements you made.
 
 #### Assessment
+
 You will be evaluated on:
+
 - Correctness of the lexical and grammar rules.
 - Functionality of the chatbot based on the provided and additional commands.
 - Code readability and comments.
