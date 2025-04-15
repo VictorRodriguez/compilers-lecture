@@ -1,0 +1,3 @@
+[submodule "MyLexYaccWork"]
+	path = MyLexYaccWork
+	url = https://github.com/VicenteVieraG/Lex-Bison-activity-chatbot.git
