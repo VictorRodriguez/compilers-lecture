@@ -1,0 +1,19 @@
+ 
+// comment
+
+// float b +
+f - b
+
+// integer a
+i * a
+
+// a = 5
+a = 5
+
+// *
+b = a * 2.8
+
+p variable
+: ?
+
+90 / number
