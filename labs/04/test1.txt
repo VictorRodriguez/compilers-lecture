@@ -1,0 +1,10 @@
+i entero = 98
+f flotante = 9.9
+90392.23923
+.23
+0.23
+213123
+juanito23 = 890
+i
+f
+//Hola mi nombre es carlo lujan
