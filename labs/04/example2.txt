@@ -1,0 +1,6 @@
+//EO7EN3GH2R
+f m
+i n
+g = 30
+l = k / 15
+p f
