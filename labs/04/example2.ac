@@ -1,0 +1,20 @@
+//Hola
+
+f float = 5.4
+i integer = 10
+
+//Suma
+float = integer + 1
+
+//Resta
+integer = integer - 2
+
+//Multiplicación
+float = float * 4.5
+
+//División
+integer = 10 / integer
+
+//Prints
+p integer
+p float
