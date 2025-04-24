@@ -1,0 +1,11 @@
+Test the chatbot by typing various inputs:
+Greetings like "hello", "hi", or "hey".
+Time queries like "what is the time", "what time is it", or simply "time".
+Farewells like "goodbye" or "bye".
+Extend the Chatbot:
+
+
+Add more patterns and responses to the chatbot. Think of additional questions users might ask and how the chatbot should respond. For example:
+Ask for the chatbot's name: "what is your name".
+Inquire about the weather: "what is the weather".
+Ask how the chatbot is doing: "how are you".

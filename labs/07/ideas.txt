@@ -1,0 +1,20 @@
+Name of the chatbot "Michael": Multi Instruction CHat Assistant Everybody Likes
+
+Questions you can ask to the bot:
+What does the acronym "M.I.C.H.A.E.L." stand for?
+What can you do? | What is your purpose?
+
+MICHAEL can do the following:
+1. Provide information about the acronym "M.I.C.H.A.E.L."
+2. Provide information about the purpose of the bot.
+3. Provide information about the creator of the bot.
+4. Talk about its favorite food, movies, songs, artists, books, tv shows, authors, places, etc.
+5. Tell you the temperature.
+6. Talk about the weather.
+7. Provide information about the current date and time.
+8. Give you quotes.
+9. Tell you the meaning of life.
+10. Say hello
+11. Say goodbye
+12. Provide information about the bot's features.
+13. Say it does not understand a question.
