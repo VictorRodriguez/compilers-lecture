@@ -1,0 +1,11 @@
+Chatbot: Hi! You can greet me, ask for the time, inquire about the weather, I can help you with simple math expressions, or say goodbye.
+Chatbot: Hello! How can I help you today?
+Chatbot: My name is Chatbot. My creator wasn't very original!
+Chatbot: The current time is 19:29.
+Chatbot: Guadalajara, Mexico: ☀️   +36°C
+Chatbot: Berlin: ☀️   +18°C
+Chatbot: The result of 2 + 2 is 4.
+Chatbot: The result of 3 * 4 is 12.
+Chatbot: The result of 12 / 3 is 4.
+Chatbot: The result of 22 - 7 is 15.
+Chatbot: Goodbye! Have a great day!

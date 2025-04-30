@@ -1,0 +1,10 @@
+hello
+what is your name
+what time is it
+what is the weather
+weather in Berlin
+2+2
+3 * 4
+12 / 3
+22 - 7
+goodbye
