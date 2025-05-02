@@ -122,6 +122,11 @@ In this exercise, you will create a simple chatbot using `lex` (for lexical anal
      - Inquire about the weather: "what is the weather".
      - Ask how the chatbot is doing: "how are you".
 
+7. **Extensions added:** Three new features were added to the chatbot:
+   - Added asking the chatbot for its name. Depending on the time of day a different name is given, simulating different people on different shifts
+   - Added asking the chatbot for the weather on a specific city. The chatbot will query `openweathermap.org` for it, displaying the temperature and the state of the sky.
+   - Added specifying the chatbot how do you want to be called. When specified, all answers from it will call you by your name.
+
  
 #### Submission
 Create a pull request and submit the following files:
