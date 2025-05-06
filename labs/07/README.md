@@ -1,139 +1,88 @@
-# Practice Exercise: Building a Simple Chatbot with `lex` and `yacc`
+# Lea YACB (yet another chatbot)
 
-#### Objective
-In this exercise, you will create a simple chatbot using `lex` (for lexical analysis) and `yacc` (for parsing). The chatbot will be able to respond to greetings, queries about the time, and farewells. This practice will help you understand how to use `lex` and `yacc` to build a basic interactive application.
+```plaintext
+  .---.       .-''-.     ____                .--.  ____     __   ____        _______    _______   .--.     
+  | ,_|     .'_ _   \  .'  __ `.            / ,-'  \   \   /  /.'  __ `.    /   __  \  \  ____  \ `-. \    
+,-./  )    / ( ` )   '/   '  \  \          /_/      \  _. /  '/   '  \  \  | ,_/  \__) | |    \ |    \_\   
+\  '_ '`) . (_ o _)  ||___|  /  |         _( )_      _( )_ .' |___|  /  |,-./  )       | |____/ /   _( )_  
+ > (_)  ) |  (_,_)___|   _.-`   |        (_ o _) ___(_ o _)'     _.-`   |\  '_ '`)     |   _ _ '.  (_ o _) 
+(  .  .-' '  \   .---..'   _    |         (_,_) |   |(_,_)'   .'   _    | > (_)  )  __ |  ( ' )  \  (_,_)  
+ `-'`-'|___\  `-'    /|  _( )_  |          \ \  |   `-'  /    |  _( )_  |(  .  .-'_/  )| (_{;}_) |   / /   
+  |        \\       / \ (_ o _) /           \ `-.\      /     \ (_ o _) / `-'`-'     / |  (_,_)  /.-' /    
+  `--------` `'-..-'   '.(_,_).'             `--' `-..-'       '.(_,_).'    `._____.'  /_______.' `--'     
+```
 
-#### Prerequisites
-- Basic understanding of C programming.
-- Familiarity with `lex` and `yacc` tools.
-- Basic knowledge of lexical analysis and parsing.
+**Meet Lea (YACB)!**
 
-#### Instructions
+Lea is yet another chatbot that can help with all sorts of queries. Want to know the time? Need a weather update? Looking for a good joke or some music recommendations? Give it a try!
 
-1. **Setup Your Environment**:
-   - Ensure you have `lex` (or `flex`) and `yacc` (or `bison`) installed on your system.
-   - Create a working directory for this exercise.
+## What can Lea do?
 
-2. **Create the Lex Specification**:
-   - Create a file named `chatbot.l`.
-   - Define patterns to match user inputs for greetings, farewells, and time queries.
+### Greetings, Farewells, and Thank Yous
 
-   ```c
-   %{
-   #include "y.tab.h"
-   %}
+Say hello, goodbye, or thank you to Lea!
 
-   %%
+### Queries: Time, Weather, Names, Jokes
 
-   hello           { return HELLO; }
-   hi              { return HELLO; }
-   hey             { return HELLO; }
-   goodbye         { return GOODBYE; }
-   bye             { return GOODBYE; }
-   time            { return TIME; }
-   what[' ']is[' ']the[' ']time  { return TIME; }
-   what[' ']time[' ']is[' ']it  { return TIME; }
-   \n              { return 0; }  /* End of input on newline */
+Ask Lea questions like:
 
-   .               { return yytext[0]; }
+- what time is it
+- how is the weather
+- tell me a joke
+- what is your name
 
-   %%
+### Math Operations
 
-   int yywrap() {
-       return 1;
-   }
-   ```
+Lea is super smart! Try some basic operations (+, -, *, /) like:
 
-3. **Create the Yacc Specification**:
-   - Create a file named `chatbot.y`.
-   - Define grammar rules to handle different types of user inputs.
+- `5 + 5 * 2`
+- `(8 - 4) * (10 / 5)`
 
-   ```c
-   %{
-   #include <stdio.h>
-   #include <time.h>
+### Sing a Song
 
-   void yyerror(const char *s);
-   int yylex(void);
-   %}
+Lea can also sing, just ask:
 
-   %token HELLO GOODBYE TIME
+- sing a song
+- sing a part of a cool song
 
-   %%
+### Music Recommendations
 
-   chatbot : greeting
-           | farewell
-           | query
-           ;
+Lea can help you with music recommendations too!
 
-   greeting : HELLO { printf("Chatbot: Hello! How can I help you today?\n"); }
-            ;
+- For albums: recommend me an album
+- For artists: recommend me an artist
+- For songs: recommend me a song
 
-   farewell : GOODBYE { printf("Chatbot: Goodbye! Have a great day!\n"); }
-            ;
+## Instructions
 
-   query : TIME { 
-               time_t now = time(NULL);
-               struct tm *local = localtime(&now);
-               printf("Chatbot: The current time is %02d:%02d.\n", local->tm_hour, local->tm_min);
-            }
-          ;
+### Step 1: Install `lex` and `yacc`
 
-   %%
+Make sure you have `flex`, `bison`, `gcc` and `sqlite3` installed on your machine.
 
-   int main() {
-       printf("Chatbot: Hi! You can greet me, ask for the time, or say goodbye.\n");
-       while (yyparse() == 0) {
-           // Loop until end of input
-       }
-       return 0;
-   }
+### Step 2: Get the Files
 
-   void yyerror(const char *s) {
-       fprintf(stderr, "Chatbot: I didn't understand that.\n");
-   }
-   ```
+Next, you need the chatbot files (`chatbot.l` and `chatbot.y`). You can either copy and paste them from this folder or clone this repository.
 
-4. **Compile the Lex and Yacc Files**:
-   - Open a terminal in your working directory.
-   - Run the following commands to compile the lex and yacc files:
+### Step 3: Open the Terminal and Compile
 
-   ```sh
-   lex chatbot.l
-   yacc -d chatbot.y
-   cc lex.yy.c y.tab.c -o chatbot -ll -ly
-   ```
+Open your terminal and run the following commands to compile the `lex` (.l) and `yacc` (.y) files.
 
-5. **Run the Chatbot**:
-   - Execute the compiled chatbot program:
+```console
+flex chatbot.l
+bison -d chatbot.y
+gcc lex.yy.c chatbot.tab.c -o chatbot -lsqlite3
+```
 
-   ```sh
-   ./chatbot
-   ```
+> **_NOTE:_** When you run `flex chatbot.l`, it will generate a `lex.yy.c` file. And, `bison -d chatbot.y` will generate two files, `chatbot.tab.c` and `chatbot.tab.h`.
 
-   - Test the chatbot by typing various inputs:
-     - Greetings like "hello", "hi", or "hey".
-     - Time queries like "what is the time", "what time is it", or simply "time".
-     - Farewells like "goodbye" or "bye".
+### Step 4: Run the Chatbot
 
-6. **Extend the Chatbot**:
-   - Add more patterns and responses to the chatbot. Think of additional questions users might ask and how the chatbot should respond. For example:
-     - Ask for the chatbot's name: "what is your name".
-     - Inquire about the weather: "what is the weather".
-     - Ask how the chatbot is doing: "how are you".
+Run this command to start Lea:
 
- 
-#### Submission
-Create a pull request and submit the following files:
-- `chatbot.l`
-- `chatbot.y`
+```console
+./chatbot
+```
 
-Ensure your code is well-commented to explain your logic and any enhancements you made.
+### Step 5: Test the Chatbot
 
-#### Assessment
-You will be evaluated on:
-- Correctness of the lexical and grammar rules.
-- Functionality of the chatbot based on the provided and additional commands.
-- Code readability and comments.
-
-By completing this exercise, you will gain practical experience in using `lex` and `yacc` to build and extend a basic interactive application, laying the foundation for more complex projects in the future.
+Lea is ready to chat! Go ahead and test it with some queries.
